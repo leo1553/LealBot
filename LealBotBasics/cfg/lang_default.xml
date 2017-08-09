@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<language name="en-US">
+  <NowPlaying>Now Playing: **{0}** addeded by **{1}**!</NowPlaying>
+  <ActionSkip>**{0}** skipped **{1}**.</ActionSkip>
+  <ActionVolume>**{0}** changed the volume from **{1}** to **{2}**.</ActionVolume>
+  <ActionPause>**{0}** paused the music.</ActionPause>
+  <ActionResume>**{0}** resumed the music.</ActionResume>
+  <ActionClear>**{0}** cleared the queue.</ActionClear>
+  <ActionRemove>**{0}** removed **{1}** from the queue.</ActionRemove>
+  <ActionEnqueue>**{0}** has been enqueued by **{1}**.</ActionEnqueue>
+  <ActionShuffle>**{0}** shuffled the queue.</ActionShuffle>
+  <AlreadyPaused>Already paused.</AlreadyPaused>
+  <AlreadyPlaying>Already playing.</AlreadyPlaying>
+  <NeedVC>You must be in a voice channel.</NeedVC>
+  <BotNeedVC>Bot not connected to a voice channel.</BotNeedVC>
+  <Cya>'Til later! o/</Cya>
+  <AvaliableCommands>Avaliable commands</AvaliableCommands>
+  <NothingPlaying>There's no music playing right now.</NothingPlaying>
+  <NothingEnqueued>There's nothing enqueued right now.</NothingEnqueued>
+  <Done>Done</Done>
+  <Queue>Queue</Queue>
+  <Roles>Roles</Roles>
+  <Ready>Ready</Ready>
+  <Error>Error</Error>
+  <Waiting>Waiting</Waiting>
+  <Processing>Processing</Processing>
+  <Converting>Converting</Converting>
+  <Downloading>Downloading</Downloading>
+  <VideoNotFound>Video not found.</VideoNotFound>
+  <DownloadNoVorbis>Could not find vorbis audio file from '{0}'.</DownloadNoVorbis>
+  <DownloadError>Could not download music.</DownloadError>
+  <PlaylistError>Could not process playlist.</PlaylistError>
+  <PlaylistNotAllowed>You are not allowed to play playlists.</PlaylistNotAllowed>
+  <QueueItem>**{0}** addeded by **{1}**.</QueueItem>
+  <QueueItemProcess>**{0}** ({1}) addeded by **{2}**</QueueItemProcess>
+  <NowPlayingReady>Now Playing: {0} `{1}/{2}`</NowPlayingReady>
+  <NowPlayingProcess>{0}: **{1}** addeded by **{2}**</NowPlayingProcess>
+  <AndMore>`And {0} more!`</AndMore>
+  <InvalidID>Invalid ID.</InvalidID>
+  <InvalidUrl>Invalid url.</InvalidUrl>
+  <InvalidNumber>Invalid number.</InvalidNumber>
+  <InvalidVolume>Use from 0.1 to 100.</InvalidVolume>
+  <CommandSyntax>Syntax: {0}{1}</CommandSyntax>
+  <CommandNotAllowed>You are not allowed to use this command.</CommandNotAllowed>
+  <NotSameChannel>You and the bot are not in the same channel.</NotSameChannel>
+  <SomethingWrong>Something went wrong.</SomethingWrong>
+  <PlayListAdd>`{0}` musics from **{1}** are now being enqued by **{2}**.</PlayListAdd>
+  <InvalidPlayList>Invalid playlist url.</InvalidPlayList>
+  <AutoPlayAdd>Music addeded to autoplay file.</AutoPlayAdd>
+  <AutoPlayBan>Music removed from autoplay file.</AutoPlayBan>
+  <Help>Help</Help>
+  <QueuePage>`Page {0}/{1}`</QueuePage>
+  <CurrentVolume>Current volume is {0}.</CurrentVolume>
+  <CurrentLanguage>Current language is {0}.</CurrentLanguage>
+  <AvaliableLanguages>Avaliable Languages</AvaliableLanguages>
+  <InvalidLanguage>Invalid language.</InvalidLanguage>
+  <ActionChangeLanguage>**{0}** changed the language to **{1}**.</ActionChangeLanguage>
+
+  <PlayCommand>Searches or play a music from youtube.</PlayCommand>
+  <PlayCommandMusic>YouTubeUrl / Search</PlayCommandMusic>
+  <MultiPlayCommand>Searches or play musics from youtube. Use a line break (shift-enter) for each music.</MultiPlayCommand>
+  <GPCommand>Enqueues all musics from a google play music playlist.</GPCommand>
+  <PlaylistUrl>PlaylistUrl</PlaylistUrl>
+  <PLCommand>Enqueues all musics from a youtube playlist.</PLCommand>
+  <SkipCommand>Skips the current music.</SkipCommand>
+  <QueueCommand>Shows the current queue.</QueueCommand>
+  <QueueCommand>Page</QueueCommand>
+  <NPCommand>Shows the current music.</NPCommand>
+  <VolumeCommand>Changes the volume.</VolumeCommand>
+  <VolumeCommandValue>Value / +Value / -Value</VolumeCommandValue>
+  <CleanCommand>Cleans the chat.</CleanCommand>
+  <CleanCommandLimit>MessageLimit</CleanCommandLimit>
+  <ClearCommand>Clears the queue.</ClearCommand>
+  <RemoveCommand>Removes a music in a specific index from the queue.</RemoveCommand>
+  <RemoveCommandIndex>Index</RemoveCommandIndex>
+  <PauseCommand>Pauses the music.</PauseCommand>
+  <ResumeCommand>Resume the music.</ResumeCommand>
+  <UrlCommand>Shows the current music's youtube url.</UrlCommand>
+  <AddCommand>Add the current music to the autoplay list.</AddCommand>
+  <BanCommand>Removes the current music from the autoplay list.</BanCommand>
+  <ShuffleCommand>Shuffles the current queue.</ShuffleCommand>
+  <HelpCommand>Shows all commands and functions.</HelpCommand>
+  <WhosDaddyCommand>Tells the truth.</WhosDaddyCommand>
+  <JoinCommand>Connects/Changes the bot to your current channel.</JoinCommand>
+  <StatusCommand>Pretty obvious, isn't it?</StatusCommand>
+  <LangCommand>Sees/sets the current language.</LangCommand>
+  <LangCommandLang>Language</LangCommandLang>
+</language>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<language name="pt-BR">
+  <NowPlaying>Tocando: **{0}** adicionada por **{1}**!</NowPlaying>
+  <ActionSkip>**{0}** pulou **{1}**.</ActionSkip>
+  <ActionVolume>**{0}** volume trocado de **{1}** para **{2}**.</ActionVolume>
+  <ActionPause>**{0}** pausou a música.</ActionPause>
+  <ActionResume>**{0}** despausou a música.</ActionResume>
+  <ActionClear>**{0}** limpou a fila.</ActionClear>
+  <ActionRemove>**{0}** removeu **{1}** da fila.</ActionRemove>
+  <ActionEnqueue>**{0}** foi adicionada por **{1}**.</ActionEnqueue>
+  <ActionShuffle>**{0}** embaralhou a fila.</ActionShuffle>
+  <AlreadyPaused>Já está pausado.</AlreadyPaused>
+  <AlreadyPlaying>Já está tocando.</AlreadyPlaying>
+  <NeedVC>Você precisa estar em um canal de voz.</NeedVC>
+  <BotNeedVC>O BOT não está conectado em um canal.</BotNeedVC>
+  <Cya>Bye Bye! o/</Cya>
+  <AvaliableCommands>Comandos disponíveis</AvaliableCommands>
+  <NothingPlaying>Não há música tocando.</NothingPlaying>
+  <NothingEnqueued>Não há músicas na fila.</NothingEnqueued>
+  <Done>Pronto</Done>
+  <Queue>Fila</Queue>
+  <Roles>Cargos</Roles>
+  <Ready>Pronto</Ready>
+  <Error>Erro</Error>
+  <Waiting>Esperando</Waiting>
+  <Processing>Processando</Processing>
+  <Converting>Convertendo</Converting>
+  <Downloading>Baixando</Downloading>
+  <VideoNotFound>Vídeo não encontrado.</VideoNotFound>
+  <DownloadNoVorbis>Não foi possível extrair áudio em formato vorbis de '{0}'.</DownloadNoVorbis>
+  <DownloadError>Não foi possível baixar a música.</DownloadError>
+  <PlaylistError>Não foi possível processar a playlist.</PlaylistError>
+  <PlaylistNotAllowed>Você não tem permissão para adicionar playlists.</PlaylistNotAllowed>
+  <QueueItem>**{0}** adicionado por **{1}**.</QueueItem>
+  <QueueItemProcess>**{0}** ({1}) adicionada por **{2}**</QueueItemProcess>
+  <NowPlayingReady>Tocando: {0} `{1}/{2}`</NowPlayingReady>
+  <NowPlayingProcess>{0}: **{1}** adicionada por **{2}**</NowPlayingProcess>
+  <AndMore>`E {0} mais!`</AndMore>
+  <InvalidID>ID inválido.</InvalidID>
+  <InvalidUrl>Url inválida.</InvalidUrl>
+  <InvalidNumber>Número inválido.</InvalidNumber>
+  <InvalidVolume>Use de 0.1 a 100.</InvalidVolume>
+  <CommandSyntax>Sintaxe: {0}{1}</CommandSyntax>
+  <CommandNotAllowed>Você não tem permissão para utilizar esse comando.</CommandNotAllowed>
+  <NotSameChannel>Você e o BOT não estão no mesmo canal.</NotSameChannel>
+  <SomethingWrong>Deu merda.</SomethingWrong>
+  <PlayListAdd>`{0}` músicas de **{1}** estão sendo agora adicionadas por **{2}**.</PlayListAdd>
+  <InvalidPlayList>Url da playlist inválida.</InvalidPlayList>
+  <AutoPlayAdd>Música adicionada ao autoplay.</AutoPlayAdd>
+  <AutoPlayBan>Música removida do autoplay.</AutoPlayBan>
+  <Help>Ajuda</Help>
+  <QueuePage>`Pagina {0}/{1}`</QueuePage>
+  <CurrentVolume>O volume atual é {0}.</CurrentVolume>
+  <CurrentLanguage>A língua atual é {0}.</CurrentLanguage>
+  <AvaliableLanguages>Língua Disponíveis</AvaliableLanguages>
+  <InvalidLanguage>Língua inválida.</InvalidLanguage>
+  <ActionChangeLanguage>**{0}** mudou a língua para **{1}**.</ActionChangeLanguage>
+
+  <PlayCommand>Procura ou toca uma música do youtube.</PlayCommand>
+  <PlayCommandMusic>Url do youtube / Procurar</PlayCommandMusic>
+  <MultiPlayCommand>Procura ou toca músicas do youtube. Use uma linha (shift-enter) para cada música.</MultiPlayCommand>
+  <GPCommand>Adiciona todas as músicas da playlist do google play.</GPCommand>
+  <PlaylistUrl>Url da playlist</PlaylistUrl>
+  <PLCommand>Adiciona todas as músicas de uma playlist do youtube.</PLCommand>
+  <SkipCommand>Pula a música atual.</SkipCommand>
+  <QueueCommand>Mostra a fila atual.</QueueCommand>
+  <QueueCommandPage>Página</QueueCommandPage>
+  <NPCommand>Mostra a música atual.</NPCommand>
+  <VolumeCommand>Troca o volume.</VolumeCommand>
+  <VolumeCommandValue>Valor / +Valor / -Valor</VolumeCommandValue>
+  <CleanCommand>Limpa o chat.</CleanCommand>
+  <CleanCommandLimit>Limite de mensagens</CleanCommandLimit>
+  <ClearCommand>Limpa a fila.</ClearCommand>
+  <RemoveCommand>Remove a música no específico índice da fila.</RemoveCommand>
+  <RemoveCommandIndex>Índice</RemoveCommandIndex>
+  <PauseCommand>Pausa a música.</PauseCommand>
+  <ResumeCommand>Despausa a música.</ResumeCommand>
+  <UrlCommand>Mostra o link da música atual.</UrlCommand>
+  <AddCommand>Adiciona a música atual a lista do autoplay.</AddCommand>
+  <BanCommand>Remove a música atual a lista do autoplay.</BanCommand>
+  <ShuffleCommand>Embaralha a fila atual.</ShuffleCommand>
+  <HelpCommand>Mostra todos os comandos e funções.</HelpCommand>
+  <WhosDaddyCommand>Mostra a verdade.</WhosDaddyCommand>
+  <JoinCommand>Muda ou conecta o bot ao seu canal de voz.</JoinCommand>
+  <StatusCommand>OSTENTAÇÃO</StatusCommand>
+  <LangCommand>Vê ou muda a língua atual.</LangCommand>
+  <LangCommandLang>Língua</LangCommandLang>
+</language>
