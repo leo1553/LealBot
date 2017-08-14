@@ -13,6 +13,7 @@ namespace LealBotBasics.Scripts.Audio {
     public static class Threads {
         public static Thread playerThread;
         public static Thread downloadThread;
+        public static Thread deleteThread;
 
         public static string AutoPlayPath = "/cfg/autoplay.txt";
         public static string TempAutoPlayPath = "/cfg/autoplay.temp";
@@ -90,6 +91,42 @@ namespace LealBotBasics.Scripts.Audio {
                     req.Delete();
                 else
                     req.Download();
+            }
+        }
+
+        static List<string> toDelete = new List<string>();
+        static object deleteLock = new object();
+        public static void AddToDelete(string path) {
+            lock(deleteLock) {
+                toDelete.Add(path);
+            }
+        }
+
+        public static void Deleter() {
+            int i;
+            bool fail;
+            while(!Program.BreakLoops) {
+                Thread.Sleep(1000);
+                if(toDelete.Count == 0)
+                    continue;
+                lock(deleteLock) {
+                    i = 0;
+                    while(i != toDelete.Count) {
+                        fail = false;
+                        try {
+                            if(File.Exists(toDelete[i]))
+                                File.Delete(toDelete[i]);
+                        }
+                        catch {
+                            fail = true;
+                        }
+                        if(!fail) {
+                            toDelete.RemoveAt(i);
+                            continue;
+                        }
+                    }
+                    i++;
+                }
             }
         }
 

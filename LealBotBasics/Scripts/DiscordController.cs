@@ -38,12 +38,16 @@ namespace LealBotBasics.Scripts {
         public static async void Initialize() {
             Threads.playerThread = new Thread(Threads.Player);
             Threads.downloadThread = new Thread(Threads.Downloader);
+            Threads.deleteThread = new Thread(Threads.Deleter);
             Threads.playerThread.Start();
             Threads.downloadThread.Start();
+            Threads.deleteThread.Start();
             Threads.playerThread.IsBackground = false;
             Threads.downloadThread.IsBackground = true;
+            Threads.deleteThread.IsBackground = true;
             Threads.playerThread.Priority = ThreadPriority.AboveNormal;
-            Threads.downloadThread.Priority = ThreadPriority.Highest;
+            Threads.downloadThread.Priority = ThreadPriority.Lowest;
+            Threads.deleteThread.Priority = ThreadPriority.Lowest;
 
 
             Client.MessageReceived += OnMessage;

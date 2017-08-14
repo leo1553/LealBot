@@ -101,11 +101,6 @@ namespace LealBotBasics.Scripts.Audio {
         }
 
         void _Process() {
-            if(uri.Contains("playlist?list=")) {
-                ProcessPlaylist();
-                return;
-            }
-
             IEnumerable<YouTubeVideo> videos;
 
             try {
@@ -147,7 +142,10 @@ namespace LealBotBasics.Scripts.Audio {
             name = name.Replace('}', ']').Replace('{', '[');
 
             tempFilePath = TempPath + FixFileName(name) + video.FileExtension;
-            filePath = Path + FixFileName(name) + ".mp3";
+            if(!Settings.DirectPlay)
+                filePath = Path + FixFileName(name) + ".mp3";
+            else
+                filePath = tempFilePath;
 
             string normalizedUrl = NormalizeYoutubeUrl(uri);
             VideosResource.ListRequest videoRequest = ytService.Videos.List("contentDetails");
@@ -200,10 +198,6 @@ namespace LealBotBasics.Scripts.Audio {
                 user.ActionMessage(Language.ActionEnqueue, name, user.Mention);
         }
 
-        public void ProcessPlaylist() {
-
-        }
-
         public static byte[] buffer = new byte[8 * 1024];
         public void Download() {
             if(!File.Exists(tempFilePath)) {
@@ -219,10 +213,7 @@ namespace LealBotBasics.Scripts.Audio {
                             if(status == Status.Skip) {
                                 Log.WriteColoredLine(ConsoleColor.DarkMagenta, "[Download] ", "Aborted.");
                                 fStream.Close();
-                                while(File.Exists(tempFilePath)) {
-                                    File.Delete(tempFilePath);
-                                    Thread.Sleep(50);
-                                }
+                                Threads.AddToDelete(tempFilePath);
                                 Threads.MusicsSkipped++;
                                 return;
                             }
@@ -240,10 +231,7 @@ namespace LealBotBasics.Scripts.Audio {
                 }
                 catch {
                     Log.WriteColoredLine(ConsoleColor.DarkMagenta, "[Download] ", "Error.");
-                    while(File.Exists(tempFilePath)) {
-                        File.Delete(tempFilePath);
-                        Thread.Sleep(50);
-                    }
+                    Threads.AddToDelete(tempFilePath);
                     if(isAutoPlay && !isPlayList)
                         user.ReplyMessage(Language.DownloadError);
                     status = Status.Skip;
@@ -263,52 +251,25 @@ namespace LealBotBasics.Scripts.Audio {
                 }
                 Log.WriteColoredLine(ConsoleColor.DarkMagenta, "[Conversor] ", "Converted.");
             }
-            else
-                filePath = tempFilePath;
 
             status = Status.Ready;
         }
 
         public void Delete() {
             if(!Settings.DirectPlay) {
-                while(File.Exists(tempFilePath)) {
-                    File.Delete(tempFilePath);
-                    Thread.Sleep(50);
-                }
+                Threads.AddToDelete(tempFilePath);
             }
 
             if(Settings.DeleteAfterPlay) {
                 bool delete = true;
-                if(Settings.DirectPlay) {
-                    foreach(Request r in Threads.toPlay) {
-                        if(r.filePath != null && r.filePath == filePath) {
-                            delete = false;
-                            break;
-                        }
+                foreach(Request r in Threads.toPlay) {
+                    if(r.filePath != null && r.filePath == filePath) {
+                        delete = false;
+                        break;
                     }
                 }
-                if(delete) {
-                    while(File.Exists(tempFilePath)) {
-                        File.Delete(tempFilePath);
-                        Thread.Sleep(50);
-                    }
-                }
-
-                delete = true;
-                if(!Settings.DirectPlay) {
-                    foreach(Request r in Threads.toPlay) {
-                        if(r.filePath != null && r.filePath == filePath) {
-                            delete = false;
-                            break;
-                        }
-                    }
-                }
-                if(delete) {
-                    while(File.Exists(filePath)) {
-                        File.Delete(filePath);
-                        Thread.Sleep(50);
-                    }
-                }
+                if(delete)
+                    Threads.AddToDelete(filePath);
             }
         }
 
